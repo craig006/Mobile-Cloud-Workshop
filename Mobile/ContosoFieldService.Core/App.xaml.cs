@@ -4,6 +4,9 @@ using ContosoFieldService.PageModels;
 using FreshMvvm;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace ContosoFieldService
@@ -58,6 +61,8 @@ namespace ContosoFieldService
             {
                 //Init App Center
             }
+
+            AppCenter.Start("830bbdff-c183-4363-ae2d-664415802513", typeof(Analytics), typeof(Crashes));
 
             // Handle when your app starts
         }
